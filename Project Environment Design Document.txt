@@ -1,0 +1,34 @@
+FAI Project Environment (Mendikot)
+
+Game represented by a matrix where each row corresponds to a card and each column represents a feature
+The features are:
+
+Card considered for playing (Used to determine number of cards used for playing the game [min 4])
+Card in your hand
+Card available to be played
+Card in current trick played by agent
+Card in current trick played by opponent
+Card in current trick played by teammate
+Card in previous trick played by agent
+Card in previous trick played by opponent
+Card in previous trick played by teammate
+Card in trump suite
+
+
+52x9 matrix represents the entire game
+
+Score Matrix:
+Each row belongs to a player (including the agent)
+
+		Tricks won	Tricks won with 10	Teammate/Opponent (1 for teammate, 0 for opponent)
+Agent		1		1			1			
+Player 2	2		2			0
+Player 3	0		0			1
+Player 4	1		1			0
+
+
+Rewards:
++5: Trick won with a 10 (By you or teammate)
++1: Trick won without a 10 (By you or teammate)
+-5: Trick won with a 10 (By opponents)
+-1: Trick won without a 10 (By opponent)

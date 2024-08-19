@@ -1,0 +1,37 @@
+import numpy as np
+
+CARD_FOR_PLAYING        = 0
+CARD_IN_HAND_AGENT      = 1
+CARD_IN_HAND_OPPNT_1    = 2
+CARD_IN_HAND_TEAM       = 3
+CARD_IN_HAND_OPPNT_2    = 4
+CARD_AVAILABLE          = 5
+CARD_CURR_TRICK_AGENT   = 6
+CARD_CURR_TRICK_OPPNT_1 = 7
+CARD_CURR_TRICK_TEAM    = 8
+CARD_CURR_TRICK_OPPNT_2 = 9
+CARD_PREV_TRICK_AGENT   = 10
+CARD_PREV_TRICK_OPPNT_1 = 11
+CARD_PREV_TRICK_TEAM    = 12
+CARD_PREV_TRICK_OPPNT_2 = 13
+CARD_TRUMP              = 14
+
+SUITS = ['S', 'H', 'C', 'D']
+CARDS = ['2', '3', '4', '5', '6', '7', '8', '9', 'T', 'J', 'Q', 'K', 'A']
+CARD_IDX = np.arange(len(CARDS)*len(SUITS)).reshape(len(CARDS), len(SUITS))
+
+AGENT       = 0
+OPPONENT_1  = 1
+TEAMMATE    = 2
+OPPONENT_2  = 3
+PLAYER_RENDER = {0:"AGENT", 1:"OPPNT1", 2:"TEAM", 3:"OPPNT2"}
+SUITS_RENDER = {'S':'♠', 'H': '♥', 'C':'♣', 'D':'♦'}
+
+REW_TRICK_WON_10    = 5
+REW_TRICK_WON       = 1
+REW_TRICK_LOST      = -1
+REW_TRICK_LOST_10   = -5
+REW_GAME_WON        = +10
+REW_GAME_LOST       = -10
+
+GAME_PLAYERS = 4
